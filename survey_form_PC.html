@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<style>
+				@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+				form {
+				  margin: auto; 
+				  padding-bottom: 2em;
+				}
+
+				header{
+				  justify-items: center;
+				  display: grid;
+				}
+				#description{
+				  background-color: rgb(106,103,206, 0.7);
+				  text-align: center;
+				}
+
+				#title{
+				  font-family: 'AileronHeavy';
+				  color: #3BE8B0;
+				}
+				#description{
+				  font-family: 'Montserrat';  
+				}
+				body {
+				  padding-top: 5em;
+				  color: white;
+				  font-family: 'Montserrat', sans-serif;
+				  font-weight: bolder;
+				  background-image: url("https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?cs=srgb&dl=pexels-kindel-media-7688336.jpg&fm=jpg");
+				  background-position: center;
+				  background-size: cover;
+				  background-repeat: no repeat;
+				}
+
+
+				.form-group{
+				  display: grid;
+				  width: 500px;
+				  margin: auto;
+				  background-color: rgb(106,103,206, 0.7);
+				  padding: 10px 20px 10px 20px;
+					max-width: 500px;
+					min-width: 300px;
+				}
+				.form-control::placeholder, select{
+				  font-family: 'Montserrat', sans-serif;
+				  color: black;
+				  font-weight: bold;
+				}
+				.form-control{
+				  height: 2em;
+				}
+
+				fieldset{
+				  border: none;
+				}
+				fieldset span{
+				  padding-bottom: 10px;
+				}
+
+				.info{
+				  padding-bottom: 1em;
+				}
+				select, info, textarea {
+				  color: black;
+				}
+
+				.texta{
+				  margin: auto;
+					width: 100%;
+				  min-height: 2em;
+				  background-color: rgb(255, 255, 255);
+				  border: 1px solid #0a0a23;
+				  color: black;
+				  resize: none;
+				}
+			</style>
+		
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<meta charset="UTF-8"/>
+			<title>Survey Form | Perosnal Consultant</title>
+			<!--<link rel="stylesheet" type="text/css" href="styles.css"> -->	
+		</head>
+		
+		<body>
+		<!-- header -->
+			<header id= "header">
+				<h1 id="title">Personal Consultant</h1>
+				<!-- <p id="description"> Thank you for taking the time to help us improve our services and products!</p> -->
+			</header>
+			
+		<!-- Form -->
+			<form id="survey-form">
+			  <p class="form-group" id="description"> Thank you for taking the time to help us improve our services and products!</p>
+			<!-- name -->
+				<div class="form-group">
+				  <label for="name" id="name-label" class="info"> Name: </label>
+				  <input type="text"
+						 placeholder="Enter your name"
+						 name="name"
+						 id="name"
+						 class="form-control"
+						 required/>
+				</div>
+			
+				<!-- email -->
+				<div class="form-group">
+				  <label for="email" id="email-label" class="info"> Email: </label>
+					<input type="email"
+						   placeholder="Enter your email"
+						   name="email"
+						   id="email"
+						   class="form-control "
+						   required/>
+				</div>
+			
+				<!-- age -->
+				<div class="form-group">
+				  <label for="age" id="number-label" class="info"> Age <span class="clue">(optional)</span> </label>
+				  <input type="number"
+						 name="age"
+						 placeholder= "Age"
+						 min="18"
+						 max="99"
+						 id="number"
+						 class="form-control"/>
+				</div>
+			
+				<!-- dropdown -->
+				<div class="form-group">
+				  <p> How did you find out about us? </p>
+				  <select id="dropdown"
+						  name="social-media"
+						  class="form-control"
+              style="color: black; font-weigth: bolder;"
+						  required>
+					<option disable selected value> Select option</option>
+					<option value="facebook"> Facebook </option>
+					<option value="tiktok"> Tik Tok </option>
+					<option value="instagram"> Instagram </option>
+					<option value="youtube"> Youtube </option>
+					<option value="someone"> Personal referral
+					</option>
+				  </select>
+				</div>
+			
+				<!-- Services -->
+				<div class="form-group">
+				  <p> What services are you interested in? 
+				  <span class="clue">(Check all that apply)</span>
+				  </p>
+				  <label for="digital-marketing">  
+					<input type="checkbox"
+						 name="services"
+						 value="digital-marketing"
+						   id="digital-marketing"
+						   class="input-checkbox"/> Digital marketing and Social media management
+				  </label>
+			 
+				  <label for="web-development">
+					<input type="checkbox"
+						   name="services"
+						   value="web-development"
+						   id="web-development"
+						   class="input-checkbox"/> Web development (Wordpress, Shopify & Wix)
+				  </label>
+				  
+				  <label for="branding-and-rebranding">
+					<input type="checkbox"
+						   name="services"
+						   value="Branding-and-rebranding"
+						   id="branding-and-rebranding"
+						   class="input-checkbox"/> Branding and rebranding
+				  </label>
+				  
+				  <label for="analysis">
+					<input type="checkbox"
+						   name="services"
+						   value="analysis"
+						   id="analysis"
+						   class="input-checkbox"/> Google analytics & reports
+				  </label>
+				  
+				  <label for="seo-content-strategy">
+					<input type="checkbox"
+						   name="services"
+						   value="seo-content-strategy"
+						   id="seo-content-strategy"
+						   class="input-checkbox"/> SEO Content Strategies
+				  </label>
+				  
+				  <label for="multimedia-ads">
+					<input type="checkbox"
+						   name="services"
+						   value="multimedia-ads"
+						   id="multimedia-ads"
+						   class="input-checkbox"/> Multimedia advertisement
+				  </label>      
+				</div>
+        <!-- Workshops and courses -->
+        <fieldset class="form-group">
+          <span> Have you particpated in any of our workshops or courses?</span>
+          <label><input type="radio" name="workshops" value="canva_guide"/> Canva guide for  entrepreneurs</label>
+          <label><input type="radio" name= "workshops" value="content-creation"/> Content creation for social media</label>
+           <label><input type="radio" name= "workshops" value="canva_workshop"/> Canva workshop for entrepreneurs</label>
+      </fieldset>
+        <label class="form-group">Do you have any feedback for us?</label>
+        <div class="form-group">
+          <textarea name="feedback" rows="3" cols="30"placeholder="Please let us know!" class="texta"/></textarea>
+        </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" class="submit-button" id="submit" style="background: #FFB900; height: 3em; border-color: white; color: white; font-weight: bolder;"/>
+      </div>
+			</form>
+		</body>
+	</html>
+
+
