@@ -1,29 +1,662 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
   <html>
     <head>
        <meta charset="UTF-8" />
        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
        <link rel="stylesheet" href="styles.css" type="text/css"/>
-    </head>    
+    </head> -->
+    
     <body>
+      <!-- Python logo -->
+      <div id="logo">
+        <img class="logo" src= "https://www.python.org/static/community_logos/python-logo-inkscape.svg"/>
+           <!--"https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" -->
+      </div>
+      
+      <!-- Navigation bar -->
       <nav id="navbar">
-        <header>Python 3 Documentation</header>
+        <header>Python 3 Documentation
+        </header>
         <ul>
-          <li>something</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><a class="nav-link" href="#Python">Python</a></li>
+          <li><a class="nav-link" href="#Getting_started">Getting started</a></li>
+          <li><a class="nav-link" href="#Comments">Comments</a></li>
+          <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+          <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+          <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+          <li><a class="nav-link" href="#Data_types">Data types</a></li>
+          <li><a class="nav-link" href="#Conditional_flow">Conditional flow</a></li>
+          <li><a class="nav-link" href="#Loops">Loops</a></li>
+          <li><a class="nav-link" href="#Operators">Operators</a></li>
+          <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+          <li><a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a></li>
         <ul>
       </nav>
-      <main>
-        <section>
-          <header><header>
+      
+      <!-- Python, freeCodeCamp and Github icons -->
+      <div>
+        <section class="icons-class">
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+            <h2><a href="https://www.python.org/">Python</a></h2>
+          </div>
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M97.22,96.21c10.36-10.65,16-17.12,16-21.9,0-2.76-1.92-5.51-3.83-7.42A14.81,14.81,0,0,0,101,64.05c-8.48,0-20.92,8.79-35.84,25.69C23.68,137,2.51,182.81,3.37,250.34s17.47,117,54.06,161.87C76.22,435.86,90.62,448,100.9,448a13.55,13.55,0,0,0,8.37-3.84c1.91-2.76,3.81-5.63,3.81-8.38,0-5.63-3.86-12.2-13.2-20.55-44.45-42.33-67.32-97-67.48-165C32.25,188.8,54,137.83,97.22,96.21ZM239.47,420.07c.58.37.91.55.91.55Zm93.79.55.17-.13C333.24,420.62,333.17,420.67,333.26,420.62Zm3.13-158.18c-16.24-4.15,50.41-82.89-68.05-177.17,0,0,15.54,49.38-62.83,159.57-74.27,104.35,23.46,168.73,34,175.23-6.73-4.35-47.4-35.7,9.55-128.64,11-18.3,25.53-34.87,43.5-72.16,0,0,15.91,22.45,7.6,71.13C287.7,364,354,342.91,355,343.94c22.75,26.78-17.72,73.51-21.58,76.55,5.49-3.65,117.71-78,33-188.1C360.43,238.4,352.62,266.59,336.39,262.44ZM510.88,89.69C496,72.79,483.52,64,475,64a14.81,14.81,0,0,0-8.39,2.84c-1.91,1.91-3.83,4.66-3.83,7.42,0,4.78,5.6,11.26,16,21.9,43.23,41.61,65,92.59,64.82,154.06-.16,68-23,122.63-67.48,165-9.34,8.35-13.18,14.92-13.2,20.55,0,2.75,1.9,5.62,3.81,8.38A13.61,13.61,0,0,0,475.1,448c10.28,0,24.68-12.13,43.47-35.79,36.59-44.85,53.14-94.38,54.06-161.87S552.32,137,510.88,89.69Z"/></svg>
+            <h2><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/">freeCodeCamp</a></h2>
+          </div>
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            <h2>z3l3vPy</h2>
+          </div>
+        </section>
+      </div>
+      <!-- Main: Information -->    
+      <main id="main-doc">
+        <section class="main-section" id="Python">
+          <header><h2>Python</h2><header>
           <article>
-            <p>something</p>
-            <hr style="border: 1px solid yellow"></hr>
+            <p>Python is a high-level, interpreted programming language that was first released in 1991 by Guido van Rossum. It is known for its simplicity and readability, making it a popular choice for beginners and experienced programmers alike.
+
+Python's syntax is easy to learn and its dynamic typing makes it easy to write and execute code quickly. It supports multiple programming paradigms including object-oriented, functional, and procedural programming.
+
+Python has a vast standard library, which includes modules for web development, data analysis, scientific computing, and more. It also has a large and active community, with a wide range of third-party packages available for use.
+
+Python is used in a variety of applications including web development, scientific computing, artificial intelligence, machine learning, data analysis, and automation. It is a popular language for data science and has many powerful tools for data manipulation and visualization.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Getting_started">
+          <header><h2>Getting started</h2><header>
+          <article>
+            <p>Python is often recommended as a first programming language for beginners precisely because of its readability and ease of use, so even if you have no prior programming experience, it is still possible to start learning Python.</p>
+            <br><p>Although there are many resources online to help you learn Python, however it is important to set up a local testing environment to improve your skills. Basic knowledge of the command line will be useful, along with text editing skills and a text editor of your preference.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Comments">
+          <header><h2>Comments</h2><header>
+          <article>
+            <p>There are two ways to add comments in Python code: single-line comments and multi-line comments.</p>
+            <br><p>Single-line comments start with a hash symbol (#) and continue until the end of the line.</p>
+            <code> # This is a single-line comment</code>
+            <p>Multi-line comments are enclosed in triple quotes (""") and can span multiple lines.</p>
+            <code> 
+              '''<br>
+              This is a multi-line comment,<br>
+              that can span multiple lines<br>
+              '''
+            </code>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Hello_World">
+          <header><h2>Hello World</h2><header>
+          <article>
+            <p>To get started writing Python code, open your text editor and type:</p>
+            <code>print('Hello World')</code>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+            </section>
+        <section class="main-section" id="Declaring_variables">
+          <header><h2>Declaring variables</h2><header>
+          <article>
+            <p>Use this guide to help you cultivate good practices when declaring variables.</p><br>
+            <ol>
+              <li><strong>Use descriptive names:</strong> Choose variable names that are descriptive and easy to understand. This makes your code more readable and helps others understand your code.</li>
+              <li><strong>Use lowercase letters:</strong> Variable names in Python should be in lowercase letters, with words separated by underscores (_).</li>
+              <li><strong>Avoid using built-in names:</strong> Avoid using Python built-in function and variable names as your variable names. This can cause conflicts and unexpected behavior.</li>
+              <li><strong>Use meaningful variable types:</strong> It's a good practice to use meaningful variable types. For example, if you're storing a person's age, use an integer variable type instead of a string.</li>
+              <li><strong>Initialize variables:</strong> Always initialize variables with a value, even if it's just None. This helps avoid errors and makes your code more readable.</li>
+              <li><strong>Use constants:</strong> If you have a value that will not change, use a constant. In Python, constants are typically defined in uppercase letters.</li>
+            </ol>
+            
+            <code>
+              # Define a variable for a person's age<br>
+              person_age = 23<br>
+              # Define a constant for the maximum allowed age<br>
+              MAX_AGE = 100<br>
+            </code>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Variable_scope">
+          <header><h2>Variable scope</h2><header>
+          <article>
+            <p>In Python 3, variable scope determines where in your code a variable can be accessed and modified. There are four levels of variable scope in Python:</p><br>
+            <ol>
+              <li><strong>Local scope:</strong> A variable that is defined inside a function, has local scope and can only be accessed and modified within that function.</li>
+							<li><strong>Enclosing scope:</strong> A variable that is defined in the outer function of a nested function has enclosing scope and can be accessed and modified by both the outer and inner functions.</li>
+							<li><strong>Global scope:</strong> A variable that is defined outside of any function has global scope and can be accessed and modified from anywhere in the code.</li>
+							<li><strong>Built-in scope:</strong> The built-in scope contains Python's built-in functions and modules, such as print() and math.</li>
+					  </ol>
+            <p>It's important to note that if you define a variable with the same name in a function as a variable in a higher scope, the function will use the local variable rather than the variable in the higher scope. This is known as shadowing.</p>
+            <pre><code># Global variable
+my_global_variable = "Hello, world!"
+
+def my_function():
+    # Local variable
+    my_local_variable = "Hello, Python!"
+    print(my_local_variable)
+                    
+    # Access global variable
+    print(my_global_variable)
+                    
+    # Change global variable
+    global my_global_variable
+    my_global_variable = "Hello, everyone!"
+                    
+# Call the function
+my_function()
+                
+# Access global variable outside of the function
+print(my_global_variable)</code></pre>
+            <p>In this example, <em>my_global_variable</em> is defined in the global scope and can be accessed and modified from anywhere in the code. <em>my_local_variable</em> is defined in the local scope of my_function() and can only be accessed and modified within that function. The global keyword is used to modify <em>my_global_variable</em> from within the function, allowing the value of the variable to be changed globally.</p>
+                          <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Data_types">
+          <header><h2>Data types</h2><header>
+          <article>
+            <p>There are several built-in data types that you can use to store and manipulate different kinds of data. Here are some of the most common data types in Python 3:</p>
+<ol>
+  <li><strong>Integer</strong> (int): Integers are whole numbers that can be positive, negative, or zero. In Python 3, integers have unlimited precision, meaning they can be arbitrarily large or small.
+    <code>
+      #For example: <br>
+      42, -7, 0, 1000000000000000000000000.
+    </code>
+  <li><strong>Float</strong> (float): Floats are decimal numbers. They can represent fractional values and can be positive, negative, or zero.
+    <code>
+      #For example:<br> 
+      3.14, -2.5, 0.0, 1.0.
+    </code>
+  <li><strong>Boolean</strong> (bool): Booleans are either True or False. They are used to represent logical values in Python 3.
+    <code>
+      >>> 2 > 1 #<em>2 is greater than 1</em><br> 
+      True<br>
+      >>> 3 == 1 #<em>3 is equal to 1</em><br>
+      False
+    </code>
+  <li><strong>String</strong> (str): Strings are sequences of characters enclosed in quotes. They can be single-quoted ('...') or double-quoted ("..."). 
+    <code>
+      #For example:<br>
+      'Hello, world!', "Python is awesome!".<br>
+    </code>
+  <li><strong>List</strong> (list): Lists are ordered collections of objects. They can contain objects of different types, including other lists. 
+    <code>
+      #Lists can contain integers, strings, booleans, and other lists as well. It can also contain elements of different data types.<br>
+      [1, 2, 3],<br> 
+      ['apple', 'banana', 'cherry'],<br>
+      [1, 'apple', True].<br>
+      [[1, 2, 3], [2, 4, 6], [7, 8]]<br>
+    </code>
+  <li><strong>Tuple</strong> (tuple): Tuples are similar to lists, but they are immutable, meaning their contents cannot be changed after they are created. 
+    <code>
+      #For example:<br> 
+      (1, 2, 3),<br>
+      ('apple', 'banana', 'cherry'),<br>
+      (1, 'apple', True)<br>
+    </code>
+  <li><strong>Dictionary</strong> (dict): Dictionaries are unordered collections of key-value pairs. The keys must be unique and immutable, but the values can be of any type. 
+    <code>
+      #Key:Value pairs:<br>
+      {'name': 'John', 'age': 30, 'city': 'New York'}.<br>
+    </code>
+  <li><strong>Set</strong> (set): Sets are unordered collections of unique objects. They can be used to perform mathematical set operations such as union, intersection, and difference. For example: {1, 2, 3}, {'apple', 'banana', 'cherry'}.
+<p>These are just a few of the data types available in Python 3. Understanding data types is important because it allows you to choose the appropriate data structure for your data and perform operations on it in the most efficient way possible.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Conditional_flow">
+          <header><h2>Conditional flow</h2><header>
+          <article>
+            <p><p>Conditional flow in Python 3 refers to the ability of the language to execute different blocks of code depending on whether certain conditions are met or not. This is typically achieved using <em>if</em>, <em>elif</em>, and <em>else</em> statements.</p>
+<pre><code>if condition:
+  # Code to execute if the condition is true
+			
+elif condition:
+  # Code to execute if condition is true
+  
+else:
+  # Code to execute if neither condition nor condition2 is true</code></pre>
+<p>The <em>if</em> statement is used to test a condition, and if it evaluates to <em>True</em>, the block of code indented below it is executed. If the condition is not <em>True</em>, the <em>elif</em> statement (short for <em>else if</em>) is evaluated, and if its condition is <em>True</em>, its block of code is executed. If neither the <em>if</em> nor the <em>elif</em> conditions are <em>True</em>, the <em>else</em> block of code is executed.</p>
+<pre><code># Set a variable 
+x = 10
+	
+# Test the value of x
+if x < o:
+  print("x is negative")
+elif x == 0:
+  print("x is zero")
+else:
+  print("x is positive")</code></pre>
+<p>In this example, we set a variable <em>x</em> to 10 and then use an <em>if</em> statement to test its value. Since <em>x</em> is greater than <em>0</em>, the <em>if</em> condition is not true, so we move on to the <em>elif</em> statement. Since <em>x</em> is not equal to <em>0</em>, the <em>elif</em> condition is also not true, so we execute the code in the <em>else</em> block, which prints the message <em>x is positive</em>.</p>
+<br><p>Conditional flow is a fundamental concept in programming and is used extensively in Python 3, as well as in many other programming languages. It allows you to create flexible programs that can adapt to different situations and make decisions based on input or other conditions.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Loops">
+          <header><h2>Loops</h2><header>
+          <article>
+            <p>In Python 3, there are two main types of loops: <em>for</em> loops and <em>while</em> loops.</p>
+<br><p>A <em>for</em> loop is used to iterate over a sequence (such as a list, tuple, or string). The <em>while</em> loop is used to repeatedly execute a block of code as long as a certain condition is met.</p>
+<pre><code># Example of a "for" loop
+my_list = [1, 2, 3, 4, 5]
+
+# Iterate over the list and print each element
+for element in my_list:
+    print(element)</code></pre>
+<p>In this example, we define a list called <em>my_list</em> and then use a <em>for</em> loop to iterate over each element of the list. For each element, we print it to the console.</p>
+<pre><code># Example of a "while" loop
+# Set a variable
+x = 0
+
+# Keep printing a message until x is greater than 5
+while x &lt; 5:
+    print("x is less than 5")
+    x += 1</code></pre>
+<p>In this example, we set a variable <em>x</em> to 0 and then use a <em>while</em> loop to repeatedly print the message <em>"x is less than 5"</em> as long as <em>x</em> is less than 5. We also increment <em>x</em> by 1 in each iteration of the loop to ensure that the loop eventually terminates.</p>
+<br><p>Loops are a powerful tool for iterating over collections of data, processing large datasets, and performing repetitive tasks. They allow you to write more efficient and concise code by automating repetitive tasks, and they are an essential part of any programming language.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Operators">
+          <header><h2>Operators</h2><header>
+          <article>
+            <h1 style="text-align:center;">Arithmetic operators</h1><br>
+ <!-- Arithmetic operators -->
+            <p><strong>Arithmetic operators</strong> in Python 3 are used to perform mathematical operations on numeric data types. Here are the arithmetic operators available in Python 3:</p>
+            <ul class="ul">
+                <li><strong>+</strong> : addition</li>
+                <li><strong>-</strong> : subtraction</li>
+                <li><strong>*</strong> : multiplication</li>
+                <li><strong>/</strong> : division</li>
+                <li><strong>%</strong> : modulus (returns the remainder of the division)</li>
+                <li><strong>**</strong> : exponentiation (raises a number to a power)</li>
+                <li><strong>//</strong> : floor division (returns the quotient of the division, rounded down to the nearest integer)</li>
+            </ul><br>
+<p>Here are some examples of how to use arithmetic operators in Python 3:</p><br>
+<pre><code># Addition
+x = 5
+y = 10
+print(x + y)  # 15
+
+# Subtraction
+x = 5
+y = 10
+print(y - x)  # 5
+
+# Multiplication
+x = 5
+y = 10
+print(x * y)  # 50
+
+# Division
+x = 5
+y = 10
+print(y / x)  # 2.0 (floating point division)
+
+# Modulus
+x = 5
+y = 10
+print(y % x)  # 0 (no remainder)
+
+# Exponentiation
+x = 2
+y = 3
+print(x ** y)  # 8 (2 raised to the power of 3)
+
+# Floor division
+x = 5
+y = 2
+print(x // y)  # 2 (quotient of 5 divided by 2, rounded down to nearest integer)
+</code></pre><br>
+            <p>Arithmetic operators can be combined with assignment operators to update the value of a variable. For example:</p>
+<pre><code>x = 5
+x += 2  # equivalent to x = x + 2
+print(x)  # 7
+
+y = 10
+y /= 2  # equivalent to y = y / 2
+print(y)  # 5.0</code></pre><br>
+<p>In addition to numeric data types, some arithmetic operators can also be used with other data types. For example, the <em>+</em> operator can be used to concatenate strings and lists:</p><br>
+<pre><code># String concatenation
+greeting = "Hello"
+name = "Alice"
+message = greeting + ", " + name + "!"
+print(message)  # "Hello, Alice!"
+
+# List concatenation
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+combined_list = list1 + list2
+print(combined_list)  # [1, 2, 3, 4, 5, 6]</code></pre>
+            
+<!-- Assignment operators -->
+            <h1 style="text-align:center;">Assignment operators</h1><br>
+            <p><strong>Assignment operators</strong> in Python 3 are used to assign values to variables. They combine the assignment operation (=) with another operation, such as addition, subtraction, multiplication, division, or modulus. Here are the assignment operators available in Python 3:</p><br>
+            <ul class="ul">
+              <li><strong>=</strong> : assigns a value to a variable</li>
+              <li><strong>+=</strong> : adds a value to the variable and assigns the result to the variable</li>
+              <li><strong>-=</strong> : subtracts a value from the variable and assigns the result to the variable</li>
+              <li><strong>*=</strong> : multiplies the variable by a value and assigns the result to the variable</li>
+              <li><strong>/=</strong>: divides the variable by a value and assigns the result to the variable</li>
+              <li><strong>%=</strong>: calculates the modulus of the variable and a value and assigns the result to the variable</li>
+              <li><strong>//=</strong>: performs integer division on the variable and a value and assigns the result to the variable</li>
+              <li><strong>**=</strong>: raises the variable to a power and assigns the result to the variable</li>
+            </ul><br>
+            <p>Here are some examples of how to use assignment operators in Python 3:</p><br>
+<pre><code>x = 5
+x += 1  # equivalent to x = x + 1
+print(x)  # output: 6
+
+y = 10
+y -= 2  # equivalent to y = y - 2
+print(y)  # output: 8
+
+z = 3
+z *= 4  # equivalent to z = z * 4
+print(z)  # output: 12
+
+a = 20
+a /= 5  # equivalent to a = a / 5
+print(a)  # output: 4.0
+
+b = 7
+b %= 3  # equivalent to b = b % 3
+print(b)  # output: 1
+
+c = 10
+c //= 3  # equivalent to c = c // 3
+print(c)  # output: 3
+
+d = 2
+d **= 3  # equivalent to d = d ** 3
+print(d)  # output: 8</code></pre><br>
+<p>Assignment operators can be used to write more concise and readable code. They also make it easier to modify the value of a variable in place, without having to write a separate statement to do so.</p><br>
+            
+<!-- Comparison operators -->
+            <p> <strong>Comparison operators</strong> in Python 3 are used to compare two values and return a boolean value (either True or False) based on the result of the comparison. Here are the comparison operators available in Python 3: </p><br>
+            <ul class="ul">
+              <li><strong>==</strong> : checks if two values are equal</li>
+              <li><strong>!=</strong> : checks if two values are not equal</li>
+              <li><strong>></strong> : checks if the left value is greater than the right value</li>
+              <li><strong><</strong>: checks if the left value is less than the right value</li>
+              <li><strong>>=</strong>: checks if the left value is greater than or equal to the right value</li>
+              <li><strong><=</strong>: checks if the left value is less than or equal to the right value</li>
+            </ul><br>
+            <p> Here are some examples of how to use comparison operators in Python 3:</p>
+            <pre><code># Equal to
+x = 5
+y = 10
+print(x == y)  # False
+print(x == 5)  # True
+
+# Not equal to
+x = 5
+y = 10
+print(x != y)  # True
+print(x != 5)  # False
+
+# Greater than
+x = 5
+y = 10
+print(y &gt; x)  # True
+print(x &gt; y)  # False
+
+# Less than
+x = 5
+y = 10
+print(x &lt; y)  # True
+print(y &lt; x)  # False
+
+# Greater than or equal to
+x = 5
+y = 10
+print(y &gt;= x)  # True
+print(x &gt;= y)  # False
+
+# Less than or equal to
+x = 5
+y = 10
+print(x &lt;= y)  # True
+print(y &lt;= x)  # False</code></pre><br>
+            <p> These comparison operators can be used in if statements, while loops, and other control flow constructs to make decisions based on the values of variables. For example: </p><br>
+            <pre><code># Using comparison operators in an if statement
+x = 5
+y = 10
+if x &lt; y:
+    print("x is less than y")
+else:
+    print("x is greater than or equal to y")
+
+# Using comparison operators in a while loop
+i = 0
+while i &lt; 5:
+    print(i)
+    i += 1</code></pre>
+            
+<!--Logical Operators -->
+            <h1 style="text-align:center;">Logical operators</h1><br>
+            <p><strong>Logical operators</strong> are used to combine two or more conditions to create a more complex condition. Python 3 supports three logical operators: <em>and</em>, <em>or</em>, and <em>not</em>.</p>
+            <ul class="ul">
+              <li><strong>and</strong> : Returns <em>True</em> if both conditions are true. Otherwise, returns <em>False</em>.</li>
+              <li><strong>or</strong> : Returns <em>True</em> if at least one of the conditions is true. Otherwise, returns <em>False</em>.</li>
+              <li><strong>not</strong> : Returns the opposite of the condition. If the condition is <em>True</em>, returns <em>False</em>, and vice versa.</li>
+            </ul>
+            <br><p>Logical operators are often used in conditional statements and loops to create more complex expressions.</p>
+<br><p>Here are some examples of logical operators in action:</p>
+            <pre><code># Example of the "and" operator
+# Define two variables
+x = 5
+y = 10
+
+# Check if both variables are greater than 0
+if x > 0 and y > 0:
+    print("Both x and y are greater than 0")
+
+#Example of the "or" operator
+# Define two variables
+x = 5
+y = 10
+
+# Check if at least one variable is greater than 10
+if x > 10 or y > 10:
+    print("At least one variable is greater than 10")
+
+#Example of the "not" operator
+# Define a variable
+x = True
+
+# Check if the variable is not True
+if not x:
+    print("x is not True")
+else:
+    print("x is True")</code></pre>
+            <br><p>In the first example, we use the <em>and</em> operator to check if both <em>x</em> and <em>y</em> are greater than 0. Since they are, the message <em>"Both x and y are greater than 0"</em> is printed to the console.</p>
+            <br><p>In the second example, we use the <em>or</em> operator to check if at least one of <em>x</em> or <em>y</em> is greater than 10. Since <em>y</em> is greater than 10, the message "At least one variable is greater than 10" is printed to the console.</p>
+            <br><p>In the third example, we use the <em>not</em> operator to check if <em>x</em> is not equal to <em>True</em>. Since <em>x</em> is <em>True</em>, the message "x is True" is printed to the console.</p><br>
+            
+<!-- Identity operators -->
+            <h1 style="text-align:center;">Identity operators</h1><br>
+            <p><strong>Identity operators</strong> in Python 3 are used to compare the memory locations of two objects. They are useful when you need to check whether two objects are the same object or not. Here are the identity operators available in Python 3:</p><br>
+            <ul class="ul">
+              <li><strong>is</strong>: returns <em>True</em> if the two objects are the same object</li>
+              <li><strong>is not</strong>: returns <em>True</em> if the two objects are not the same object</li>
+            </ul><br>
+            <p>Here are some examples of how to use identity operators in Python 3:</p><br>
+<pre><code class="language-python"># is operator
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+print(x is y)  # False
+print(x is z)  # True
+
+# is not operator
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+print(x is not y)  # True
+print(x is not z)  # False
+</code></pre>
+            <p>In the first example, we create two lists, <em>x</em> and <em>y</em>, with the same values. Since they are two different objects with different memory locations, <em>x is y</em> returns <em>False</em>. We also create a new variable <em>z</em> and assign it to <em>x</em>, so <em>x is z</em> returns <em>True</em>.</p><br>
+            <p>In the second example, we use the <em>is not</em> operator to check if two objects are not the same object. Since <em>x</em> and <em>y</em> are two different objects, <em>x is not y</em> returns <em>True</em>. Since <em>x</em> and <em>z</em> are the same object, <em>x is not z</em> returns <em>False</em>.</p><br>
+            <p>It is important to note that identity operators only compare the memory locations of objects, not their values. To compare the values of objects, you should use the equality operators (<em>==</em> and <em>!=</em>) instead.</p><br>
+            
+<!-- Membership operators -->
+            <h1 style="text-align:center;">Membership operators</h1><br>
+            <p><strong>Membership</strong> operators in Python 3 are used to test whether a value is a member of a sequence or collection. The two membership operators available in Python 3 are:</p><br>
+            <ul class="ul">
+              <li><em>in</em>: evaluates to <em>True</em> if the value is found in the sequence or collection</li>
+              <li><em>not in</em>: evaluates to <em>True</em> if the value is not found in the sequence or collection</li>
+            </ul><br>
+            <p>Here are some examples of how to use membership operators in Python 3:</p><br>
+<pre><code>x = 5
+list1 = [1, 2, 3, 4, 5]
+
+# Membership operator - in
+if x in list1:
+    print(f"{x} is in {list1}")
+else:
+    print(f"{x} is not in {list1}")
+
+# Membership operator - not in
+if x not in list1:
+    print(f"{x} is not in {list1}")
+else:
+    print(f"{x} is in {list1}")</code></pre>
+            <p>The output of the above code will be:</p>
+            <pre><code>5 is in [1, 2, 3, 4, 5]</code></pre>
+            <p>Membership operators can be used with other data types as well, such as strings and tuples:</p><br>
+            <pre><code>str1 = "Hello, world!"
+tuple1 = (1, 2, 3, 4, 5)
+
+# Membership operator - in
+if "world" in str1:
+    print("'world' is in str1")
+else:
+    print("'world' is not in str1")
+
+if 3 in tuple1:
+    print("3 is in tuple1")
+else:
+    print("3 is not in tuple1")</code></pre>
+            <p>The output of the above code will be:</p><br>
+<pre><code>'world' is in str1
+3 is in tuple1</code></pre><br>
+            
+<!-- Bitwise operators -->
+            <h1 style="text-align:center;">Bitwise operators</h1><br>  
+            <p><strong>Bitwise operators</strong> in Python 3 are used to perform operations on the binary representations of integers. Here are the bitwise operators available in Python 3:</p><br>
+            <ul class="ul">
+              <li><strong>&amp;</strong>: bitwise AND</li>
+              <li><strong>|</strong>: bitwise OR</li>
+              <li><strong>^</strong>: bitwise XOR (exclusive OR)</li>
+              <li><strong>~</strong>: bitwise NOT</li>
+              <li><strong>&lt;&lt;</strong>: bitwise left shift</li>
+              <li><strong>&gt;&gt;</strong>: bitwise right shift</li>
+            </ul>
+            <p><em>Note:</em> In the examples below, we'll use the <em>bin()</em> function to show the binary representation of integers. This function returns a string representing the binary value of the integer argument passed to it.</p><br>
+            <p>Here are some examples of how to use bitwise operators in Python 3:</p><br>
+<pre><code>x = 5
+y = 3
+
+# Bitwise AND
+print(bin(x &amp; y))  # 0b0001
+
+# Bitwise OR
+print(bin(x | y))  # 0b0111
+
+# Bitwise XOR
+print(bin(x ^ y))  # 0b0110
+
+# Bitwise NOT
+print(bin(~x))  # -0b110
+
+# Bitwise left shift
+print(bin(x &lt;&lt; 1))  # 0b1010
+
+# Bitwise right shift
+print(bin(x &gt;&gt; 1))  # 0b0010
+</code></pre>
+            <p>Bitwise operators can also be combined with assignment operators to update the value of a variable. For example:</p><br>
+<pre><code>x = 5
+x &lt;&lt;= 2  # equivalent to x = x &lt;&lt; 2
+print(bin(x))  # 0b10100</code></pre><br>
+            <p>Bitwise operators can be used to perform various operations such as setting, clearing, or toggling a bit at a specific position. Here are some examples:</p><br>
+            <pre><code># Set the third bit (counting from the right, starting at 0)
+x = 5
+x |= 1 &lt;&lt; 2
+print(bin(x))  # 0b101
+
+# Clear the second bit
+x = 5
+x &= ~(1 &lt;&lt; 1)
+print(bin(x))  # 0b001
+
+# Toggle the first bit
+x = 5
+x ^= 1
+print(bin(x))  # 0b100</code></pre>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Function_declarations">
+          <header><h2>Function declarations</h2><header>
+          <article>
+            	<p>In Python 3, a function is defined using the "<em>def</em>" keyword followed by the function name and parentheses. Any arguments to the function are listed within the parentheses. The code block that makes up the function is indented beneath the function definition line.</p>
+	<pre><code>def function_name(arg1, arg2, ...):
+    # code block
+    return result</code></pre>
+	<ul class="ul">
+		<li><em><strong>def</strong></em> : This keyword tells Python that you're defining a function.</li>
+		<li><em><strong>function_name</strong></em> : This is the name of your function. You can name your function anything you want, but it's a good idea to choose a descriptive name that reflects the purpose of the function.</li>
+		<li><em><strong>(arg1, arg2, ...)</strong></em> : These are the arguments that the function takes. If the function doesn't take any arguments, you can leave the parentheses empty.</li>
+		<li><em><strong>:</strong></em> This colon tells Python that you're done with the function definition line and that the code block is about to start.</li>
+		<li><em><strong># code block</strong></em> : This is where you put the code that your function will execute. This code block can contain any number of statements, including conditional statements, loops, and other function calls.</li>
+		<li><em><strong>return result</strong></em>: This line specifies what the function should return as its result. If you don't specify a return value, the function will return <em>None</em> by default.</li>
+	</ul><br>
+	<p>Here's an example function that takes two arguments and returns their sum:</p>
+	<pre><code>def add_numbers(x, y):
+    result = x + y
+    return result</code></pre><br>
+	<p>Once you've defined a function, you can call it by using its name and passing any required arguments in parentheses:</p>
+	<pre><code>result = add_numbers(5, 10)
+print(result) # Output: 15</code></pre>
+	<p>This will call the <em>add_numbers</em> function and pass in the arguments 5 and 10. The function will execute its code block and return the sum of the two arguments, which will be stored in the <em>result</em> variable. Finally, the result will be printed to the console.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
+          </article>
+        </section>
+        <section class="main-section" id="Object_Oriented_Programming">
+          <header><h2>Object Oriented Programming</h2><header>
+          <article>
+            <p>Object-oriented programming (OOP) is a programming paradigm that revolves around the concept of objects. In Python 3, you can define classes to create your own custom objects. A class is a blueprint for creating objects, which can have attributes (data) and methods (functions).</p><br>
+            <pre><code class="language-python">class Dog:
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+
+    def bark(self):
+        print("Woof!")
+
+    def sit(self):
+        print(f"{self.name} sits down.")</code></pre><br>
+            <p>In this example, we define a class called <em>Dog</em> which has three attributes (<em>name</em>, <em>breed</em>, and <em>age</em>) and two methods (<em>bark</em> and <em>sit</em>). The <em>__init__</em> method is a special method that gets called when a new object of the class is created, and is used to set the initial values of the object's attributes.</p>
+            <br><p>We can create instances (objects) of the <em>Dog</em> class by calling the class with the <em>()</em> operator, passing in the required arguments for the <em>__init__</em> method:</p>
+            <pre><code class="language-python">my_dog = Dog("Rex", "German Shepherd", 3)</code></pre>
+            <p>In this example, we create a new <em>Dog</em> object called <em>my_dog</em> with the name "Rex", breed "German Shepherd", and age 3.</p>
+            <br><p>We can access the object's attributes using dot notation:</p>
+            <pre><code class="language-python">print(my_dog.name) # Output: "Rex"
+print(my_dog.breed) # Output: "German Shepherd"
+print(my_dog.age) # Output: 3</code></pre>
+            <p>We can also call the object's methods:</p>
+<pre><code class="language-python">my_dog.bark() # Output: "Woof!"
+my_dog.sit() # Output: "Rex sits down."</code></pre>
+            <p>This is just a simple example, but object-oriented programming can be used to create complex systems with many interacting objects. By encapsulating data and functionality within objects, OOP can help make code more modular, easier to maintain, and easier to understand.</p><br>
+            <p>To learn more about Object Oriented Oriented Programming, you can check out this article (Object Oriented Programming in Python) from <a href="https://www.freecodecamp.org/news/object-oriented-programming-in-python/" style="color: yellow">freeCodeCamp</a>.</p>
+            <hr style="border: 1px solid yellow; margin-top: 10px"></hr>
           </article>
         </section>
       </main>
     </body>
-  </html>
+  <!--</html>-->
